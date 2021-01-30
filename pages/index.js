@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div>
+    <div className="bg-red-500">
       Welcome to NextJS
     </div>
   )
