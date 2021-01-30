@@ -1,15 +1,32 @@
+import { useEffect } from "react"
 import Card from "../components/Card"
 import Ring from "../components/Ring"
 
 function Home() {
+  const selectTheme = (value) => {
+    localStorage.setItem('theme', value)
+    const html = document.querySelector('html')
+    html.classList.add(localStorage.getItem('theme'))
+
+    if (value == 'dark') {
+      html.classList.remove('light')
+    } else {
+      html.classList.remove('dark')
+    }
+  }
+
+  useEffect(() => {
+    document.querySelector('html').classList.add(localStorage.getItem('theme'))
+  }, [])
+
   return (
     <div className="antialiased flex items-center justify-center min-h-screen bg-gray-200 dark:bg-gray-700">
       <div className="w-5/12">
         <div className="bg-white dark:bg-gray-800 shadow p-4 rounded-lg mb-6 flex items-center justify-between">
           <div className="font-semibold text-lg text-gray-800 dark:text-white">Switcher</div>
           <div>
-            <button className="w-4 h-4 focus:outline-none bg-gray-200 rounded-full mr-2"></button>
-            <button className="w-4 h-4 focus:outline-none bg-black rounded-full"></button>
+            <button onClick={() => selectTheme('light')} className="w-4 h-4 focus:outline-none bg-gray-200 rounded-full mr-2"></button>
+            <button onClick={() => selectTheme('dark')} className="w-4 h-4 focus:outline-none bg-black rounded-full"></button>
           </div>
         </div>
         <div className="bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden">
