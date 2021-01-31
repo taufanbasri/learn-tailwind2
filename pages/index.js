@@ -1,9 +1,9 @@
-const { default: Mode } = require("../components/Mode");
+import Gradient from "../components/Gradient";
 
 function Home() {
   return (
     <div>
-      <Mode/>
+      <Gradient/>
     </div>
   )
 }
