@@ -1,9 +1,9 @@
-import Gradient from "../components/Gradient";
+import Button from "../components/Button";
 
 function Home() {
   return (
-    <div>
-      <Gradient/>
+    <div className="p-24">
+      <Button/>
     </div>
   )
 }
