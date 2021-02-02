@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         'true-gray': colors.trueGray,
         'light-blue': colors.lightBlue,
-        'teal': colors.teal
+        'teal': colors.teal,
+        'rose': colors.rose
       }
     },
   },

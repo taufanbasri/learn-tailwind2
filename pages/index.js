@@ -1,9 +1,9 @@
-import Button from "../components/Button";
+import Navbar from "../components/Navbar";
 
 function Home() {
   return (
-    <div className="p-24">
-      <Button/>
+    <div>
+      <Navbar/>
     </div>
   )
 }
